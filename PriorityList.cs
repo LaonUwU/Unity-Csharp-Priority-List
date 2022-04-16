@@ -221,7 +221,7 @@ public class PriorityList<T>
     {
         if (index > size - 1 || index < 0)
         {
-            throw new ArgumentOutOfRangeException(string.Format("The current size of the list is {0}", size));
+            throw new ArgumentOutOfRangeException(string.Format("Index out of range!", size));
         }
     }
     #endregion
