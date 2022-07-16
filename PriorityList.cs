@@ -3,7 +3,7 @@ public class PriorityList<T>
 {
     #region private variables
     private T[] data;
-    private int[] dataPriority;
+    private float[] dataPriority;
 
     private int size = 0;
     private int capacity;
@@ -42,7 +42,7 @@ public class PriorityList<T>
         this.capacity = initialCapacity;
 
         data = new T[initialCapacity];
-        dataPriority = new int[initialCapacity];
+        dataPriority = new float[initialCapacity];
     }
     #region public methods
     /// <summary>
@@ -123,7 +123,7 @@ public class PriorityList<T>
     public void Clear()
     {
         data = new T[capacity];
-        dataPriority = new int[capacity];
+        dataPriority = new float[capacity];
         size = 0;
     }
 
@@ -175,7 +175,7 @@ public class PriorityList<T>
     /// </summary>
     /// <param name="item"></param>
     /// <returns></returns>
-    public int GetPriority(T item)
+    public float GetPriority(T item)
     {
         int index = -1;
         for (int i = 0; i < size; i++)
@@ -207,7 +207,7 @@ public class PriorityList<T>
     private void Resize()
     {
         T[] resizedData = new T[capacity * 2];
-        int[] resizedPriority = new int[capacity * 2];
+        float[] resizedPriority = new float[capacity * 2];
         for (int i = 0; i < capacity; i++)
         {
             resizedData[i] = data[i];
