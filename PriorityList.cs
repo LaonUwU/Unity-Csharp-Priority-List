@@ -50,7 +50,7 @@ public class PriorityList<T>
     /// </summary>
     /// <param name="item"></param>
     /// <param name="priority"></param>
-    public void Add(T item, int priority)
+    public void Add(T item, float priority)
     {
         if (size == capacity) Resize();
         data[size] = item;
